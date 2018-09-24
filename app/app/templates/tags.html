@@ -1,0 +1,31 @@
+{% extends 'upload.html' %}
+
+<body>
+  {% block body2 %}
+
+  <div class="container" style="position:absolute;">
+
+    <div class="col-sm-6">
+      <h2>Popular Tags</h2>
+
+      <ul class="list-group">
+        {% for tag in tags%}
+        <li class="list-group-item">{{tag.name}}</li>
+        {% endfor %}
+
+      </ul>
+    </div>
+
+    <div class="col-sm-6">
+      <h2>One Hour Trending tags</h2>
+      <ul class="list-group">
+        {% for tag in trend_one%}
+        <li class="list-group-item">{{tag.name}}</li>
+        {% endfor %}
+
+      </ul>
+    </div>
+  </div>
+
+  {% endblock %}
+</body>
